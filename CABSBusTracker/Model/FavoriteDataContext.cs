@@ -24,8 +24,6 @@ namespace CABSBusTracker.Model
     [Table]
     public class FavoriteItem : INotifyPropertyChanged, INotifyPropertyChanging
     {
-
-        // Define ID: private field, public property, and database column.
         private int _favoriteItemId;
 
         [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
@@ -43,7 +41,6 @@ namespace CABSBusTracker.Model
             }
         }
 
-        // Define item name: private field, public property, and database column.
         private string _stopIDName;
 
         [Column]
@@ -61,7 +58,6 @@ namespace CABSBusTracker.Model
             }
         }
 
-        // Define item name: private field, public property, and database column.
         private int _stopID;
 
         [Column]
@@ -79,7 +75,6 @@ namespace CABSBusTracker.Model
             }
         }
 
-        // Define item name: private field, public property, and database column.
         private string _stopName;
 
         [Column]
@@ -97,8 +92,6 @@ namespace CABSBusTracker.Model
             }
         }
 
-
-        // Version column aids update performance.
         [Column(IsVersion = true)]
         private Binary _version;
 
